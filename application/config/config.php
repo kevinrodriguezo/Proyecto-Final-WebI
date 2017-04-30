@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/ProyectoFinalWebI/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'views/usuario/principal.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

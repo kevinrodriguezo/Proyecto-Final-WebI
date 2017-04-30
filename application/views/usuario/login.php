@@ -56,39 +56,29 @@
         <div class="container">
           <form action="/action_page.php">
             <div class="form-group">
-              <label for="nom">Nombre Completo:</label>
-              <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
+              <label for="email">Nombre Completo:</label>
+              <input type="text" class="form-control" id="email" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
             </div>
             <div class="form-group">
-              <label for="prim_apell">Primer Apellido:</label>
-              <input type="password" class="form-control" id="prim_apell" placeholder="Digite su Primer Apellido" name="primer_apellido">
+              <label for="pwd">Primer Apellido:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digite su Primer Apellido" name="primer_apellido">
             </div>
             <div class="form-group">
-              <label for="seg_apell">Segundo Apellido:</label>
-              <input type="password" class="form-control" id="seg_apell" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
+              <label for="pwd">Segundo Apellido:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
             </div>
+
             <div class="form-group">
-              <label for="usua">Usuario:</label>
-              <input type="password" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
+              <label for="pwd">Usuario:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
             </div>
             
-            <div class="form-group">
+              <div class="form-group">
               <label for="pwd">Contraseña:</label>
               <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena">
             </div>
-            <div class="form-group">
-              <label for="corr">Correo:</label>
-              <input type="password" class="form-control" id="corr" placeholder="Digte su correo; ejemplo quiensoy@hotmail.com" name="correo">
-            </div>
             
-            <div class="form-group">
-            <label >Rol:</label>
-            <br>
-              <select name="rol">
-                <option value="usuario"selected>usuario</option>
-                <option value="administrador">administrador</option>
-              </select>
-            </div>
+
             <input type="submit" value="Registrarse" class="btn btn-default">
             
           </form>
