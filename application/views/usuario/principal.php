@@ -39,9 +39,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="<?=base_url()?>Principal/index">crautos.com</a></li>
+            <li class="active"><a href="#">crautos.com</a></li>
             <li><a href="<?=base_url()?>Usuario/index">Registrarse</a></li>
-            <li><a href="#about">Login</a></li>
+            <li><a href="<?=base_url()?>Usuario/login">Login</a></li>
           
           </ul>
         </div><!--/.nav-collapse -->

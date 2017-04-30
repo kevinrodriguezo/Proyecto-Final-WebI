@@ -33,7 +33,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?=base_url()?>principal/index">crautos.com</a></li>
+            <li><a href="<?=base_url()?>Principal/index">crautos.com</a></li>
             <li class="active"><a href="#">Registrarse</a></li>
             <li><a href="#about">Login</a></li>
             
@@ -54,7 +54,7 @@
         </div>
         
         <div class="container">
-          <form action="Usuario/registrar">
+          <form action="registrar" method="post">
             <div class="form-group">
               <label for="nom">Nombre Completo:</label>
               <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
@@ -69,7 +69,7 @@
             </div>
             <div class="form-group">
               <label for="usua">Usuario:</label>
-              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
+              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user">
             </div>
             
             <div class="form-group">

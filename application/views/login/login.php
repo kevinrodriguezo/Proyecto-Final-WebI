@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>REGISTRARSE</title>
+    <title>Login</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -33,9 +33,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?=base_url()?>principal/index">crautos.com</a></li>
-            <li class="active"><a href="#">Registrarse</a></li>
-            <li><a href="#about">Login</a></li>
+            <li><a href="">crautos.com</a></li>
+            <li><a href="">Registrarse</a></li>
+            <li ><a href="">Login</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -50,7 +50,7 @@
         <br>
         
         <div class="page-header">
-          <h1>REGISTRO</h1>
+          <h1>Login</h1>
         </div>
         
         <div class="container">

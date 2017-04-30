@@ -10,7 +10,6 @@ class Usuario extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('usuario/regstrarse.php');
-		
 	}
 
 	/**
@@ -23,17 +22,22 @@ class Usuario extends CI_Controller {
 		$nombre= $this->input->post('nombre');
 		$primer_apellido= $this->input->post('primer_apellido');
 		$segundo_apellido= $this->input->post('segundo_apellido');
-		$usuario= $this->input->post('usuario');
+		$user= $this->input->post('user');
 		$contrasena= $this->input->post('contrasena');
 		$correo= $this->input->post('correo');
 		$rol= $this->input->post('rol');
-		$usuario = array('nombre' => $nombre, 'primer_apellido' => $primer_apellido,'segundo_apellido' => $segundo_apellido, 'usuario' => $usuario, 'contrasena' => $contrasena, 'correo' => $correo, 'rol' => $rol);
+		$usuario = array('nombre' => $nombre, 'primer_apellido' => $primer_apellido,'segundo_apellido' => $segundo_apellido, 'user' => $user, 'contrasena' => $contrasena, 'correo' => $correo, 'rol' => $rol);
 		 	
-		 	$r=$this->Usuario_modelo->salvar($usuario);
+		 	$r=$this->User_model->save($usuario);
 		 	if(sizeof($r)>0){
 		 		redirect('login');
 		 	}
 		
 	}
+		public function login()
+	{
+	$this->load->view('login/login.php');	
+	}
+
 	
 }

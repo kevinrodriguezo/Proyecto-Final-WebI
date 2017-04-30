@@ -1,19 +1,13 @@
 <?php
-class Usuario_modelo extends CI_Model {
+class User_model extends CI_Model {
 
   
-  function salvar($user)
+  function save($user)
   {
     $r = $this->db->insert('usuario', $user);
     return $r;
   }
-   function instrumentos() {
-    $query = $this->db->select('nombre');
-    $query = $this->db->from('instrumento');
-    $query = $this->db->get();
 
-    return $query;
-  } 
 
 
    function autenticarse($user, $pass) {
