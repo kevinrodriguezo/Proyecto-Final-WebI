@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usuario extends CI_Controller {
+class Principal extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,5 +21,6 @@ class Usuario extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('usuario/principal.php');
+		
 	}
 }
