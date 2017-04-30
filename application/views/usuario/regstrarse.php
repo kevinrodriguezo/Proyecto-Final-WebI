@@ -39,8 +39,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">crautos.com</a></li>
-            <li><a href="<?=base_url()?>usuario/registrarse.php">Registrarse</a></li>
+            <li><a href="#">crautos.com</a></li>
+            <li class="active"><a href="#">Registrarse</a></li>
             <li><a href="#about">Login</a></li>
           
           </ul>
