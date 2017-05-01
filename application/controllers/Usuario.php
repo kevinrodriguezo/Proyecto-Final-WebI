@@ -49,12 +49,18 @@ class Usuario extends CI_Controller {
 
 		$r = $this->User_model->autenticarse($user, $contrasena);
 		if (sizeof($r) > 0) {
-			
-			redirect('registrar_vehic');
+			$data['lista']= $r;
+			$this->load->view('usuario/vista_registroauto', $data);
+
 		}else
 		{
 			echo "Not valid user";
 		}
+	}
+		public function cargarDatosUsuario()
+	{
+	 return $this->User_model->autenticarse();
+	 
 	}
 
 	
