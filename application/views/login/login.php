@@ -12,13 +12,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
     <!-- Latest compiled and minified JavaScript -->
+<!--
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link type="text/css" href="<?= base_url('css/estilo.css'); ?>" rel="stylesheet"/>
+
+
+    -->
+
+
+
+    <link type="text/css" href="<?= base_url('css/estilo_login.css'); ?>" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    -->
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -35,7 +62,7 @@
           <ul class="nav navbar-nav">
             <li><a href="">crautos.com</a></li>
             <li><a href="">Registrarse</a></li>
-            <li ><a href="">Login</a></li>
+            <li class="active"><a href="">Login</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -54,32 +81,18 @@
         </div>
         
         <div class="container">
-          <form action="/action_page.php">
+          <form action="usuario/autenticarse" method="post">
             <div class="form-group">
-              <label for="email">Nombre Completo:</label>
-              <input type="text" class="form-control" id="email" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
+              <label for="usua">Usuario:</label>
+              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user" required>
             </div>
             <div class="form-group">
-              <label for="pwd">Primer Apellido:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digite su Primer Apellido" name="primer_apellido">
-            </div>
-            <div class="form-group">
-              <label for="pwd">Segundo Apellido:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
-            </div>
-
-            <div class="form-group">
-              <label for="pwd">Usuario:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
-            </div>
-            
-              <div class="form-group">
               <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena">
+              <input type="password" class="form-control" id="pwd" placeholder="Digite su Contraseña" name="contrasena" required="">
             </div>
             
 
-            <input type="submit" value="Registrarse" class="btn btn-default">
+            <input type="submit" value="Login" class="btn btn-default">
             
           </form>
         </div>

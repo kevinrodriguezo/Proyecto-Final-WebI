@@ -39,5 +39,23 @@ class Usuario extends CI_Controller {
 	$this->load->view('login/login.php');	
 	}
 
+
+
+	public function autenticarse()
+	{
+
+		$user = $this->input->post('user');
+		$contrasena = $this->input->post('contrasena');
+
+		$r = $this->User_model->autenticarse($user, $contrasena);
+		if (sizeof($r) > 0) {
+			
+			echo "Hello";
+		}else
+		{
+			echo "Not valid user";
+		}
+	}
+
 	
 }
