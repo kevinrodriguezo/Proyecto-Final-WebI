@@ -50,7 +50,7 @@ class Usuario extends CI_Controller {
 		$r = $this->User_model->autenticarse($user, $contrasena);
 		if (sizeof($r) > 0) {
 			
-			echo "Hello";
+			redirect('Vehiculo/index');
 		}else
 		{
 			echo "Not valid user";
