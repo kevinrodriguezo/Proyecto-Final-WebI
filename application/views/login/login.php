@@ -81,7 +81,7 @@
         </div>
         
         <div class="container">
-          <form action="usuario/autenticarse" method="post">
+          <form action="autenticarse" method="post">
             <div class="form-group">
               <label for="usua">Usuario:</label>
               <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user" required>

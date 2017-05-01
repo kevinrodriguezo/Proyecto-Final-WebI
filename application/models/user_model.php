@@ -11,7 +11,7 @@ class User_model extends CI_Model {
 
 
    function autenticarse($user, $pass) {
-    $query = $this->db->get_where('musico', array('nombre' => $user, 'contrasena' => $pass));
+    $query = $this->db->get_where('usuario', array('user' => $user, 'contrasena' => $pass));
 
 	  return $query->result_object();
   }
