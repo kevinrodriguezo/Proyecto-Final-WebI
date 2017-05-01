@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'principal/index';
 $route['registro'] = 'usuario/index';
 $route['login'] = 'Usuario/login';
+$route['ventasauto'] = 'Usuario/venta';
 $route['autenticarse'] = 'usuario/autenticarse';
 $route['registrar_vehic'] = 'Vehiculo/index';
 $route['usuario'] = 'usuario';

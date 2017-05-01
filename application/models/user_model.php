@@ -7,6 +7,11 @@ class User_model extends CI_Model {
     $r = $this->db->insert('usuario', $user);
     return $r;
   }
+   function save_auto($auto)
+  {
+    $r = $this->db->insert('vehiculo', $auto);
+    return $r;
+  }
 
 
   //Funcion para revisar que un usuario se encuentre registrado cuando intenta  loguearse
@@ -28,9 +33,14 @@ class User_model extends CI_Model {
     echo $query;
   } 
 
+
 */
 
- 
+ function guardar_Vehiculo()
+ {
+
+ 	
+ }
  
 
 

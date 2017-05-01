@@ -62,6 +62,27 @@ class Usuario extends CI_Controller {
 	 return $this->User_model->autenticarse();
 	 
 	}
+	public function registrar_vehiculo()
+	{
+
+		$marca= $this->input->post('marca');
+		$transmision= $this->input->post('transmision');
+		$modelo= $this->input->post('modelo');
+		$precio= $this->input->post('precio');
+		$descripcion= $this->input->post('descripcion');
+
+		$vehiculo = array('marca' => $marca, 'transmision' => $transmision,'modelo' => $modelo, 'precio' => $precio, 'descripcion' => $descripcion);
+		 	
+		 	$r=$this->User_model->save_auto($vehiculo);
+		 	if(sizeof($r)>0){
+		 		redirect('ventasauto');
+		 	}
+		
+	}
+	public function venta()
+	{
+	$this->load->view('usuario/enventa.php');	
+	}
 
 	
 }

@@ -7,14 +7,18 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Bienvenido a crautos.com</title>
+    <title>Autos en venta</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link type="text/css" href="<?= base_url('css/estilo_registrarauto.css'); ?>" rel="stylesheet"/>
+    <link type="text/css" href="<?= base_url('css/estilo.css'); ?>" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -30,8 +34,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<?=base_url()?>Principal/index">crautos.com</a></li>
-            <li class="active"><a href="#">Poner en venta</a></li>
-            <li><a href="#">Comprar Auto</a></li>
+            <li><a href="">Poner en Venta</a></li>
+            <li class="active"><a href="">Autos en Venta</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -43,102 +47,42 @@
       <br>
       <br>
       <div class="container theme-showcase" role="main">
-        <br>
-        <h3>Bienvendo@:</h3>
-        
-         
+        <div class="page-header">
+          <h1>ESTOS SON AUTOS EN VENTA</h1>
         </div>
-        <?php
-        if (sizeof($lista)>0):
-          foreach ($lista as $item):
-
-
-        ?>
         
-        <h3>
-          <?php
-          echo $item['nombre'];
-          echo $item['primer_apellido']; 
-          echo " ";
-          echo $item['segundo_apellido'];
-          ?>
-        </h3>
-
-        <?php endforeach;?>
-            <?php endif; ?>
-            <div class="page-header">
-             <h1 >REGISTRO AUTOMÓVIL</h1>
         <div class="container">
-          <form action="registrar_vehiculo" method="post">
-            
+          <form action="/action_page.php">
             <div class="form-group">
-              <label >Marca:</label>
-              <br>
-              <select name="marca">
-                <option value="hyudai"selected>Hyundai</option>
-                <option value="honda">Honda</option>
-                <option value="nissan">Nissan</option>
-              </select>
+              <label for="email">Nombre Completo:</label>
+              <input type="text" class="form-control" id="email" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
             </div>
             <div class="form-group">
-              <label >Transmisión:</label>
-              <br>
-              <select name="transmision">
-                <option value="manual"selected>Manual</option>
-                <option value="automatica">Automatica</option>
-              </select>
+              <label for="pwd">Primer Apellido:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digite su Primer Apellido" name="primer_apellido">
             </div>
             <div class="form-group">
-              <label >Modelo:</label>
-              <br>
-              <select name="modelo">
-                <option value="1990"selected>1990</option>
-                <option value="1991">1991</option>
-                <option value="1992">1992</option>
-                <option value="1993">1993</option>
-                <option value="1994">1994</option>
-                <option value="1995">1995</option>
-                <option value="1996">1996</option>
-                <option value="1997">1997</option>
-                <option value="1998">1998</option>
-                <option value="1999">1999</option>
-                <option value="2000">2000</option>
-                <option value="2001">2001</option>
-                <option value="2002">2002</option>
-                <option value="2003">2003</option>
-                <option value="2004">2004</option>
-                <option value="2005">2005</option>
-                <option value="2006">2006</option>
-                <option value="2007">2007</option>
-                <option value="2008">2008</option>
-                <option value="2009">2009</option>
-                <option value="2010">2010</option>
-                <option value="2011">2011</option>
-                <option value="2012">2012</option>
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-                <option value="2015">2015</option>
-                <option value="2016">2016</option>
-                <option value="2017">2017</option>
-              </select>
+              <label for="pwd">Segundo Apellido:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
             </div>
+
             <div class="form-group">
-              <label for="precio">Precio:</label>
-              <input type="text" class="form-control" id="precio" placeholder="Digte el precio del automovil en COLONES" name="precio">
+              <label for="pwd">Usuario:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
             </div>
             
-            <div class="form-group">
-              <label for="descrip">Descripción:</label>
-              <input type="text" class="form-control" id="descrip" placeholder="Digte una descripcion importante del vehiculo" name="descripcion">
+              <div class="form-group">
+              <label for="pwd">Contraseña:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena">
             </div>
             
-            
-            
+
             <input type="submit" value="Registrarse" class="btn btn-default">
             
           </form>
         </div>
-        <!-- /container -->
+        
+        </div> <!-- /container -->
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
