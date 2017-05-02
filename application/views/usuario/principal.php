@@ -49,6 +49,8 @@ $userdata= $this->session->userdata('user');
             <li><a href="<?=base_url()?>Usuario/index">Registrarse</a></li>
             <li><a href="<?=base_url()?>Usuario/login">Login</a></li>
             <li><a href="cerrarSesion">Logout</a></li>
+            
+            <li><a>Buscar</a></li>
           
           </ul>
         </div><!--/.nav-collapse -->

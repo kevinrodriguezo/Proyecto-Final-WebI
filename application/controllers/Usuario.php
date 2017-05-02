@@ -91,7 +91,8 @@ class Usuario extends CI_Controller {
 	{
 	$this->load->view('usuario/enventa.php');	
 	}
-*/public function buscar()
+	*/
+public function buscar()
 {
 	$r=$this->input->get('search');
 	$r=$this->User_model->buscar($r);
