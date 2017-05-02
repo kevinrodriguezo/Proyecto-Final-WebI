@@ -9,7 +9,7 @@ class Vehiculo extends CI_Controller {
 	}
 public function venta()
 	{
-	$this->load->view('usuario/venventa.php');	
+	$this->load->view('usuario/enventa.php');	
 	}
 
 	public function registrar_vehiculo()

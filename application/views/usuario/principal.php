@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION['user'])){
+ redirect('login');
+}
+$userdata= $this->session->userdata('user');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +48,7 @@
             <li class="active"><a href="#">crautos.com</a></li>
             <li><a href="<?=base_url()?>Usuario/index">Registrarse</a></li>
             <li><a href="<?=base_url()?>Usuario/login">Login</a></li>
+            <li><a href="cerrarSesion">Logout</a></li>
           
           </ul>
         </div><!--/.nav-collapse -->
@@ -92,6 +99,8 @@
  
 
       <div class="page-header">
+      <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
+
         <h1>Marcas</h1>
       </div>
       <img src="http://localhost/ProyectoFinalWebI/imagenes/hyundailogo.jpg", width="350" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera"> &nbsp;&nbsp;&nbsp;

@@ -12,7 +12,22 @@ class User_model extends CI_Model {
     $r = $this->db->insert('vehiculo', $auto);
     return $r;
   }
-
+  public function cargarAutos($value='')
+  {
+    $query=$this->db->get('vehiculo');
+    return $query->result_array();
+  }
+  public function buscar($valor)
+  {
+    $this->db->select('*');
+    $this->db->from('vehiculo');
+    $this->db->like('marca',$valor);
+    $this->db->or_like('descripcion',$valor);
+    //luego unifico
+    $this->db->order_by('id','desc'); 
+    $query = $this->db->get(); 
+    return $query->result_array();
+  }
 
   //Funcion para revisar que un usuario se encuentre registrado cuando intenta  loguearse
    function autenticarse($user, $pass) {

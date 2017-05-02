@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION['user'])){
+ redirect('login');
+}
+$userdata= $this->session->userdata('user');
+?>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,9 +38,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?=base_url()?>Principal/index">crautos.com</a></li>
+            <li><a href="base">crautos.com</a></li>
             <li class="active"><a href="#">Poner en venta</a></li>
             <li><a href="#">Comprar Auto</a></li>
+             <li><a href="cerrarSesion">Logout</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -67,9 +77,10 @@
         <?php endforeach;?>
             <?php endif; ?>
             <div class="page-header">
+             <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
              <h1 >REGISTRO AUTOMÓVIL</h1>
         <div class="container">
-          <form action="registrar_vehiculo" method="post">
+          <form action="registrar_vehic" method="post">
             
             <div class="form-group">
               <label >Marca:</label>

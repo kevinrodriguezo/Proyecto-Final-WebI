@@ -49,6 +49,7 @@ class Usuario extends CI_Controller {
 
 		$r = $this->User_model->autenticarse($user, $contrasena);
 		if (sizeof($r) > 0) {
+			$this->session->set_userdata('user', $r[0]);
 			$data['lista']= $r;
 			$this->load->view('usuario/vista_registroauto', $data);
 
@@ -56,6 +57,11 @@ class Usuario extends CI_Controller {
 		{
 			echo "Not valid user";
 		}
+	}
+	public function cerrarSesion()
+	{
+		$this->session->sess_destroy('user');
+		redirect(base_url());
 	}
 		public function cargarDatosUsuario()
 	{
@@ -75,14 +81,30 @@ class Usuario extends CI_Controller {
 		 	
 		 	$r=$this->User_model->save_auto($vehiculo);
 		 	if(sizeof($r)>0){
-		 		redirect('ventasauto');
+		 		//Ejemplo de como se debe llamar una funcion.
+		 		$this->cargarAutosEnVenta();
 		 	}
 		
 	}
+	/*
 	public function venta()
 	{
 	$this->load->view('usuario/enventa.php');	
 	}
+*/public function buscar()
+{
+	$r=$this->input->get('search');
+	$r=$this->User_model->buscar($r);
+	$data['data']= $r;
+	$this->load->view('usuario/enventa', $data);
+}
+	public function cargarAutosEnVenta()
+	{
+	 $r= $this->User_model->cargarAutos();
+	 $data['data']= $r;
+	 $this->load->view('usuario/enventa.php', $data);
+	}
+	
 
 	
 }

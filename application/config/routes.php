@@ -50,11 +50,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'principal/index';
+$route['base'] = 'principal/index';
 $route['registro'] = 'usuario/index';
 $route['login'] = 'Usuario/login';
-$route['ventasauto'] = 'Usuario/venta';
+$route['ventasauto'] = 'Usuario/cargarAutosEnVenta';
 $route['autenticarse'] = 'usuario/autenticarse';
-$route['registrar_vehic'] = 'Vehiculo/index';
+$route['buscar'] = 'usuario/buscar';
+$route['registrar_vehiculo'] = 'usuario/cargarAutosEnVenta';
+$route['registrar_vehic'] = 'usuario/venta';
+$route['cerrarSesion'] = 'usuario/cerrarSesion';
 $route['usuario'] = 'usuario';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

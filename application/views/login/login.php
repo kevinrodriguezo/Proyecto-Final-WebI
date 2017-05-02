@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION['user'])){
+redirect('base');
+}
+$userdata= $this->session->userdata('user');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -60,7 +66,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="">crautos.com</a></li>
+            <li><a href="base">crautos.com</a></li>
             <li><a href="">Registrarse</a></li>
             <li class="active"><a href="">Login</a></li>
             

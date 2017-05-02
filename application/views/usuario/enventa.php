@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--CSS PARA TALAS
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -33,9 +38,18 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<?=base_url()?>Principal/index">crautos.com</a></li>
+            <li><a href="base">crautos.com</a></li>
             <li><a href="">Poner en Venta</a></li>
             <li class="active"><a href="">Autos en Venta</a></li>
+            <li class="active">
+              <form class="navbar-form navbar-left" role="search" action="buscar" method="get">
+                <div class="form-group">
+                  <input type="text" autofocus required class="form-control" name="search" placeholder="Busqueda">
+                </div>
+                <button type="submit" class="btn btn-default">Buscar</button>
+              </form>
+            </li>
+            <li><a href="cerrarSesion">Logout</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -52,34 +66,31 @@
         </div>
         
         <div class="container">
-          <form action="/action_page.php">
-            <div class="form-group">
-              <label for="email">Nombre Completo:</label>
-              <input type="text" class="form-control" id="email" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
-            </div>
-            <div class="form-group">
-              <label for="pwd">Primer Apellido:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digite su Primer Apellido" name="primer_apellido">
-            </div>
-            <div class="form-group">
-              <label for="pwd">Segundo Apellido:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
-            </div>
-
-            <div class="form-group">
-              <label for="pwd">Usuario:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su usuario, ejemplo: tigresito" name="segundo_apellido">
-            </div>
-            
-              <div class="form-group">
-              <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena">
-            </div>
-            
-
-            <input type="submit" value="Registrarse" class="btn btn-default">
-            
-          </form>
+          
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Marca</th>
+                <th>Transmision</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Descripcion</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($data as $value): ?>
+              <tr>
+                <td><?php echo $value['marca']; ?></td>
+                <td><?php echo $value['transmision']; ?></td>
+                <td><?php echo $value['modelo']; ?></td>
+                <td><?php echo $value['precio']; ?></td>
+                <td><?php echo $value['descripcion']; ?></td>
+                <td><button class="btn btn-info" id="<?php echo $value['id']; ?>">Comprar</button></td>
+              </tr>
+              <?php endforeach ?>
+            </tbody>
+          </table>
         </div>
         
         </div> <!-- /container -->
