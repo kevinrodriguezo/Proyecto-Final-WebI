@@ -155,7 +155,19 @@ public function buscar()
 			$data['data']= $r;
 	$this->load->view('usuario/enventa', $data);
 	}
-	
+
+	public function buscarHonda($value='')
+	{
+		$r=$this->User_model->buscarHy('honda');
+			$data['data']= $r;
+	$this->load->view('usuario/enventa', $data);
+	}
+	public function buscarNiss($value='')
+	{
+		$r=$this->User_model->buscarHy('nissan');
+			$data['data']= $r;
+	$this->load->view('usuario/enventa', $data);
+	}
 
 	
 }

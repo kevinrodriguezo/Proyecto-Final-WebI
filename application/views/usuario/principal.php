@@ -65,12 +65,22 @@ $userdata= $this->session->userdata('user');
           <img src="http://localhost/ProyectoFinalWebI/imagenes/hyundailogo.jpg", width="350" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera"> &nbsp;&nbsp;&nbsp;
           
           </button>
-          <input hidden type="text" name="search" value="hyundai">
+          
         </form>
+
+        <form action="buscarHo" method="post">
+        <button class="btn btn-default">
         <img src="http://localhost/ProyectoFinalWebI/imagenes/honda.jpg"; width="350"; height="2000" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
         &nbsp;&nbsp;&nbsp;
-        <img src="http://localhost/ProyectoFinalWebI/imagenes/nissanlogo.jpg"; width="350"; height="200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+        </button>
         
+          </form>
+
+          <form action="buscarNi" method="post">
+          <button class="btn btn-default">
+        <img src="http://localhost/ProyectoFinalWebI/imagenes/nissanlogo.jpg"; width="350"; height="200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+        </button>
+        </form>
         </div> <!-- /container -->
         <!-- Bootstrap core JavaScript
         ================================================== -->

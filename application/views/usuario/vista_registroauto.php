@@ -135,17 +135,17 @@ $userdata= $this->session->userdata('user');
             </div>
             <div class="form-group">
               <label for="precio">Precio:</label>
-              <input type="number" min="1" class="form-control" id="precio" placeholder="Digte el precio del automovil en COLONES" name="precio">
+              <input type="number" min="1" class="form-control" id="precio" placeholder="Digte el precio del automovil en COLONES" name="precio" required>
             </div>
             
             <div class="form-group">
               <label for="descrip">Descripción:</label>
-              <input type="text" class="form-control" id="descrip" placeholder="Digte una descripcion importante del vehiculo" name="descripcion">
+              <input type="text" class="form-control" id="descrip" placeholder="Digte una descripcion importante del vehiculo" name="descripcion" required>
             </div>
             
             
             
-            <input type="submit" value="Registrarse" class="btn btn-default">
+            <input type="submit" value="Publicar Auto" class="btn btn-default">
             
           </form>
         </div>

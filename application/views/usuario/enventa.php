@@ -60,6 +60,7 @@ $userdata= $this->session->userdata('user');
       <br>
       <div class="container theme-showcase" role="main">
         <div class="page-header">
+        <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
           <h1>ESTOS SON AUTOS EN VENTA</h1>
         </div>
         
