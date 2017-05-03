@@ -41,7 +41,7 @@ $userdata= $this->session->userdata('user');
             <li><a href="registro">Registrarse</a></li>
             <li><a href="<?=base_url()?>Usuario/login">Login</a></li>
             <li><a href="cerrarSesion">Logout</a></li>
-            <li><a href="#">Poner en Venta</a></li>
+            <li><a href="registerAut">Poner en Venta</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->

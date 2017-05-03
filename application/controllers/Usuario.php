@@ -108,12 +108,12 @@ class Usuario extends CI_Controller {
 		 	}
 		
 	}
-	/*
-	public function venta()
+	
+	public function registroAuto()
 	{
-	$this->load->view('usuario/enventa.php');	
+	$this->load->view('usuario/vista_registroauto.php');	
 	}
-	*/
+	
 
 	/*
 		Funcion para:

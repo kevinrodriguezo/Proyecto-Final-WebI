@@ -35,7 +35,7 @@
           <ul class="nav navbar-nav">
             <li><a href="base">crautos.com</a></li>
             <li class="active"><a href="#">Registrarse</a></li>
-            <li><a href="#about">Login</a></li>
+            <li><a href="cerrarSesion">Logout</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->

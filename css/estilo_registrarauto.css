@@ -1,14 +1,11 @@
 #foot
 {
-	height: 115%;
-	width: 100%;
-	margin-right: -30px;
+	height: 135px;
+	width: 150px;
+	margin-left:  -115%;
 	background-color: #444747;
 	background: #2E3030;
 	color: white; 
 
 }
-.container{
-	height: 115%;
-	width: 100%;
-}
+

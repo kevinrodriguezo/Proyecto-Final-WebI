@@ -23,7 +23,7 @@ $userdata= $this->session->userdata('user');
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
     <!-- Latest compiled and minified JavaScript -->
 
-    <link type="text/css" href="<?= base_url('css/estilo_login.css'); ?>" rel="stylesheet"/>
+    <link type="text/css" href="<?= base_url('css/estilo_registrarauto.css'); ?>" rel="stylesheet"/>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -56,7 +56,7 @@ $userdata= $this->session->userdata('user');
         <br>
         <h3>Bienvendo@:</h3>
         
-         
+         <!--
         </div>
         <?php
         if (sizeof($lista)>0):
@@ -64,7 +64,7 @@ $userdata= $this->session->userdata('user');
 
 
         ?>
-        <!--
+       
         <h3>
           <?php
           echo $item['nombre'];
@@ -73,9 +73,10 @@ $userdata= $this->session->userdata('user');
           echo $item['segundo_apellido'];
           ?>
         </h3>
--->
+
         <?php endforeach;?>
             <?php endif; ?>
+            -->
             <div class="page-header">
              <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
              <h1 >REGISTRO AUTOMÓVIL</h1>
