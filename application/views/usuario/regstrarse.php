@@ -59,7 +59,7 @@
           <form action="registrar" method="post">
             <div class="form-group">
               <label for="nom">Nombre Completo:</label>
-              <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="nombre" required autofocus="autofocus">
+              <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="nombre" required pattern="[a-zA-Z]" autofocus="autofocus">
             </div>
             <div class="form-group">
               <label for="prim_apell">Primer Apellido:</label>

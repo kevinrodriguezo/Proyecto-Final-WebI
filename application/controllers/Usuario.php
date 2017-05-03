@@ -108,7 +108,8 @@ class Usuario extends CI_Controller {
 		 	}
 		
 	}
-	
+	//Funcion que me dirige hacia la vista para publicar un auto
+	//
 	public function registroAuto()
 	{
 	$this->load->view('usuario/vista_registroauto.php');	
@@ -148,6 +149,11 @@ public function buscar()
 		$r= $this->User_model->eliminarAuto($this->input->post('id'));
 		$this->cargarAutosEnVenta();
 	}
+	/*
+		Funcion para:
+			Buscar los autos que coincidan con la marca Hyundai.
+
+	*/
 	public function buscarHyundai()
 	{
 			
@@ -155,6 +161,11 @@ public function buscar()
 			$data['data']= $r;
 	$this->load->view('usuario/enventa', $data);
 	}
+	/*
+		Funcion para:
+			Buscar los autos que coincidan con la marca Honda.
+
+	*/
 
 	public function buscarHonda($value='')
 	{
@@ -162,6 +173,11 @@ public function buscar()
 			$data['data']= $r;
 	$this->load->view('usuario/enventa', $data);
 	}
+	/*
+		Funcion para:
+			Buscar los autos que coincidan con la marca Nissan.
+
+	*/
 	public function buscarNiss($value='')
 	{
 		$r=$this->User_model->buscarHy('nissan');
