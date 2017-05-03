@@ -59,6 +59,7 @@ $route['buscar'] = 'usuario/buscar';
 $route['registrar_vehiculo'] = 'usuario/cargarAutosEnVenta';
 $route['registrar_vehic'] = 'usuario/registrar_vehiculo';
 $route['cerrarSesion'] = 'usuario/cerrarSesion';
+$route['eliminarAuto'] = 'usuario/eliminarAuto';
 $route['usuario'] = 'usuario';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

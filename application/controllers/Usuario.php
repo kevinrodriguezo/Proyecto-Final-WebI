@@ -105,6 +105,13 @@ public function buscar()
 	 $data['data']= $r;
 	 $this->load->view('usuario/enventa.php', $data);
 	}
+
+	public function eliminarAuto($value='')
+	{
+
+		$r= $this->User_model->eliminarAuto($this->input->post('id'));
+		$this->cargarAutosEnVenta();
+	}
 	
 
 	

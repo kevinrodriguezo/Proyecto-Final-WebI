@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION['user'])){
+ redirect('login');
+}
+$userdata= $this->session->userdata('user');
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -76,6 +82,8 @@
                 <th>Precio</th>
                 <th>Descripcion</th>
                 <th></th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -87,6 +95,19 @@
                 <td><?php echo $value['precio']; ?></td>
                 <td><?php echo $value['descripcion']; ?></td>
                 <td><button class="btn btn-info" id="<?php echo $value['id']; ?>">Comprar</button></td>
+
+<!--
+Para que solo elimine las publicaciones de el.
+                <?php if ($userdata['id']==$value['id']) : ?>
+                <?php endif ?>
+-->
+                <td>
+                  <form action="eliminarAuto" method="post">
+                    <button class="btn btn-info">Eliminar</button>
+                    <input hidden type="text" name="id" value="<?php echo $value['id']; ?>">
+                  </form>
+                </td>
+                <td><button class="btn btn-info" id="<?php echo $value['id']; ?>">Editar</button></td>
               </tr>
               <?php endforeach ?>
             </tbody>

@@ -51,10 +51,9 @@ class User_model extends CI_Model {
 
 */
 
- function guardar_Vehiculo()
+ function eliminarAuto($id)
  {
-
- 	
+    $this->db->delete('vehiculo', array('id' => $id)); 
  }
  
 

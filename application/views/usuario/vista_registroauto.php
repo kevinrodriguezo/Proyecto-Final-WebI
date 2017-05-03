@@ -80,7 +80,7 @@ $userdata= $this->session->userdata('user');
              <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
              <h1 >REGISTRO AUTOMÓVIL</h1>
         <div class="container">
-          <form action="registrar_vehiculo" method="post">
+          <form action="registrar_vehic" method="post">
             
             <div class="form-group">
               <label >Marca:</label>
