@@ -67,7 +67,7 @@ $userdata= $this->session->userdata('user');
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="base">crautos.com</a></li>
-            <li><a href="">Registrarse</a></li>
+            <li><a href="registro">Registrarse</a></li>
             <li class="active"><a href="">Login</a></li>
             
           </ul>

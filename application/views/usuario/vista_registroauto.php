@@ -135,7 +135,7 @@ $userdata= $this->session->userdata('user');
             </div>
             <div class="form-group">
               <label for="precio">Precio:</label>
-              <input type="text" class="form-control" id="precio" placeholder="Digte el precio del automovil en COLONES" name="precio">
+              <input type="number" min="1" class="form-control" id="precio" placeholder="Digte el precio del automovil en COLONES" name="precio">
             </div>
             
             <div class="form-group">

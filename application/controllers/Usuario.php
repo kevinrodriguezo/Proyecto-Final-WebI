@@ -34,13 +34,21 @@ class Usuario extends CI_Controller {
 		 	}
 		
 	}
+	/*
+		Funcion para:
+			Dirigirnos hacia la vista del login
+
+	*/
 		public function login()
 	{
 	$this->load->view('login/login.php');	
 	}
 
 
-
+	/*
+		Funcion para:
+			Permite verificar si el usuario que intenta loguearse esta en bd.
+	*/
 	public function autenticarse()
 	{
 
@@ -58,16 +66,30 @@ class Usuario extends CI_Controller {
 			echo "Not valid user";
 		}
 	}
+	/*
+		Funcion para:
+			Destruir la sesion, cuando el ususario quiere salir.
+
+	*/
 	public function cerrarSesion()
 	{
 		$this->session->sess_destroy('user');
 		redirect(base_url());
 	}
+	/*
+		Funcion para:
+		 verificar que el usuaro se encuentre en nuesta bd.
+	*/
+
 		public function cargarDatosUsuario()
 	{
 	 return $this->User_model->autenticarse();
 	 
 	}
+	/*
+		Funcion para:
+			Regustrar un nuevo vehiculo en la base de datos.
+	*/
 	public function registrar_vehiculo()
 	{
 
@@ -92,6 +114,11 @@ class Usuario extends CI_Controller {
 	$this->load->view('usuario/enventa.php');	
 	}
 	*/
+
+	/*
+		Funcion para:
+			Realizar una busqueda de un vehiculo.
+	*/
 public function buscar()
 {
 	$r=$this->input->get('search');
@@ -99,18 +126,34 @@ public function buscar()
 	$data['data']= $r;
 	$this->load->view('usuario/enventa', $data);
 }
+	/*
+		Funcion para:
+			Cargar una lista de autos en venta que se encuentran en la bd.
+			y envar los datos a la vista de autos en venta.
+	*/
 	public function cargarAutosEnVenta()
 	{
 	 $r= $this->User_model->cargarAutos();
 	 $data['data']= $r;
 	 $this->load->view('usuario/enventa.php', $data);
 	}
+	/*
+		Funcion para:
+			Eliminar un auto en la base de datos.
 
+	*/
 	public function eliminarAuto($value='')
 	{
 
 		$r= $this->User_model->eliminarAuto($this->input->post('id'));
 		$this->cargarAutosEnVenta();
+	}
+	public function buscarHyundai()
+	{
+			
+			$r=$this->User_model->buscarHy('hyundai');
+			$data['data']= $r;
+	$this->load->view('usuario/enventa', $data);
 	}
 	
 

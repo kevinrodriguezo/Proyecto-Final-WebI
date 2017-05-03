@@ -21,11 +21,7 @@ $userdata= $this->session->userdata('user');
     <link type="text/css" href="<?= base_url('css/estilo.css'); ?>" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- Latest compiled and minified JavaScript 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  Fixed navbar -->
+  
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -45,7 +41,7 @@ $userdata= $this->session->userdata('user');
             <li><a href="registro">Registrarse</a></li>
             <li><a href="<?=base_url()?>Usuario/login">Login</a></li>
             <li><a href="cerrarSesion">Logout</a></li>
-            <li><a href="usuario/vista_registroauto">Poner en Venta</a></li>
+            <li><a href="#">Poner en Venta</a></li>
             
           </ul>
           </div><!--/.nav-collapse -->
@@ -64,12 +60,12 @@ $userdata= $this->session->userdata('user');
           <h2><?php echo $userdata['nombre'] ." "; echo $userdata['primer_apellido']; ?></h2>
           <h1>Marcas</h1>
         </div>
-        <form method="post" action="buscar">
+        <form method="post" action="buscarHyu" >
           <button class="btn btn-default">
           <img src="http://localhost/ProyectoFinalWebI/imagenes/hyundailogo.jpg", width="350" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera"> &nbsp;&nbsp;&nbsp;
           
           </button>
-          <input hidden type="text" name="filtro" value="hyundai">
+          <input hidden type="text" name="search" value="hyundai">
         </form>
         <img src="http://localhost/ProyectoFinalWebI/imagenes/honda.jpg"; width="350"; height="2000" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
         &nbsp;&nbsp;&nbsp;

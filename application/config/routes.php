@@ -56,6 +56,7 @@ $route['login'] = 'Usuario/login';
 //$route['ventasauto'] = 'Usuario/cargarAutosEnVenta';
 $route['autenticarse'] = 'usuario/autenticarse';
 $route['buscar'] = 'usuario/buscar';
+$route['buscarHyu'] = 'usuario/buscarHyundai';
 $route['registrar_vehiculo'] = 'usuario/cargarAutosEnVenta';
 $route['registrar_vehic'] = 'usuario/registrar_vehiculo';
 $route['cerrarSesion'] = 'usuario/cerrarSesion';

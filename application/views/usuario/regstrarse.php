@@ -50,6 +50,8 @@
         <br>
         
         <div class="page-header">
+          <h2>
+          </h2>
           <h1>REGISTRO</h1>
         </div>
         
@@ -61,24 +63,24 @@
             </div>
             <div class="form-group">
               <label for="prim_apell">Primer Apellido:</label>
-              <input type="text" class="form-control" id="prim_apell" placeholder="Digite su Primer Apellido" name="primer_apellido">
+              <input type="text" class="form-control" id="prim_apell" placeholder="Digite su Primer Apellido" name="primer_apellido" required>
             </div>
             <div class="form-group">
               <label for="seg_apell">Segundo Apellido:</label>
-              <input type="text" class="form-control" id="seg_apell" placeholder="Digte su Segundo Apellido" name="segundo_apellido">
+              <input type="text" class="form-control" id="seg_apell" placeholder="Digte su Segundo Apellido" name="segundo_apellido" required>
             </div>
             <div class="form-group">
               <label for="usua">Usuario:</label>
-              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user">
+              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user" required>
             </div>
             
             <div class="form-group">
               <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena">
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena" required>
             </div>
             <div class="form-group">
               <label for="corr">Correo:</label>
-              <input type="text" class="form-control" id="corr" placeholder="Digte su correo; ejemplo quiensoy@hotmail.com" name="correo">
+              <input type="email" class="form-control" id="corr" placeholder="Digte su correo; ejemplo quiensoy@hotmail.com" name="correo" required>
             </div>
             
             <div class="form-group">
